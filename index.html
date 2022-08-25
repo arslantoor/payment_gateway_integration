@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <script src="https://staxjs.staxpayments.com/stax.js?nocache=2"></script>
+    <script src="https://staxjs.staxpayments.com/stax.js"></script>
+    <link rel="stylesheet" href="assets/css/card.css">
+</head>
+
+<body>
+    <form onsubmit="return false;">
+        <!--      Make your own form or copy this one -->
+        <div class="group">
+            <label>
+                <span>First Name</span>
+                <input name="cardholder-first-name" class="field input-box" placeholder="Jane" />
+            </label>
+            <label>
+                <span>Last Name</span>
+                <input name="cardholder-last-name" class="field input-box" placeholder="Doe" />
+            </label>
+            <label>
+                <span>Phone</span>
+                <input name="phone" class="field input-box" placeholder="+1000000000000" />
+            </label>
+        </div>
+        <div class="group">
+            <label>
+                <span>Card</span>
+                <div id="card-element" class="field">
+                    <div id="staxjs-number" style="width:180px; height:35px; display: inline-block; margin:3px"></div>
+                    <div id="staxjs-cvv" style="width:50px; height:35px; display: inline-block; margin:3px"></div>
+                </div>
+                <div style="width:40px; height:35px; display: inline-block;">
+                    <input name="month" size="3" maxlength="2" placeholder="MM"
+                        style="width: 22px; height:18px; border-radius: 3px; border: 1px solid #ccc; padding: .5em .5em; font-size: 91%;">
+                </div>
+                /
+                <div style="width:55px; height:35px; display: inline-block;padding: 0 8px 0 0">
+                    <input name="year" size="5" maxlength="4" placeholder="YYYY"
+                        style="width: 40px; height:18px; border-radius: 3px; border: 1px solid #ccc; padding: .5em .5em; font-size: 91%">
+                </div>
+            </label>
+        </div>
+        <button id="paybutton">Pay $50</button>
+        <button id="tokenizebutton">Tokenize Card</button>
+        <!-- <button id="verifybutton">verify $1</button> -->
+        <div class="outcome">
+            <div class="error"></div>
+            <div class="success">
+                Successful! The ID is
+                <span class="token"></span>
+            </div>
+            <div class="loader" style="margin: auto">
+            </div>
+    </form>
+    <div>
+        <span>or Pay with bank</span>
+        <a href="bank.html">Pay with bank</a>
+    </div>
+    <script src="assets/js/card.js"></script>
+</body>
+
+</html>

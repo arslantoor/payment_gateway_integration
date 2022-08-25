@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <script src="https://staxjs.staxpayments.com/stax.js?nocache=2"></script>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+
+<body>
+  <form onsubmit="return false;">
+<!--      Make your own form or copy this one -->
+    <div class="group">
+      <label>
+        <span>First Name</span>
+        <input name="first-name" class="field" value="Jane"/>
+      </label>
+      <label>
+        <span>Last Name</span>
+        <input name="last-name" class="field" value="Doe" />
+      </label>
+    </div>
+    <div class="group">
+      <label>
+        <span>Account #</span>
+        <input name="account-number" class="field" value="9876543210" />
+      </label>
+      <label>
+        <span>Routing #</span>
+        <input name="routing-number" class="field" value="021000021" />
+      </label>
+    </div>
+    <button id="paybutton">Pay $5</button>
+    <button id="tokenizebutton">Tokenize Bank</button>
+    <!-- <button id="verifybutton">verify $1</button> -->
+    <div class="outcome">
+      <div class="error"></div>
+      <div class="success">
+        Successful! The ID is
+        <span class="token"></span>
+      </div>
+      <div class="loader" style="margin: auto">
+      </div>
+    </div>
+  </form>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
